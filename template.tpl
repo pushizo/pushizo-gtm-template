@@ -35,7 +35,7 @@ ___TEMPLATE_PARAMETERS___
     "name": "appId",
     "displayName": "App ID",
     "simpleValueType": true,
-    "help": "Pushizo dashboard → Integrations → Google Tag Manager (starts with app_).",
+    "help": "Pushizo dashboard > Integrations > Google Tag Manager (starts with app_).",
     "valueValidators": [
       { "type": "NON_EMPTY" },
       { "type": "REGEX", "args": ["^app_[A-Za-z0-9]{10,40}$"] }
@@ -65,7 +65,7 @@ ___TEMPLATE_PARAMETERS___
     ],
     "simpleValueType": true,
     "defaultValue": "init",
-    "help": "Every action loads and initializes the SDK first; fire 'Initialize' on Initialization – All Pages."
+    "help": "Every action loads and initializes the SDK first; fire 'Initialize' on Initialization - All Pages."
   },
   {
     "type": "TEXT",
@@ -146,8 +146,8 @@ ___TEMPLATE_PARAMETERS___
 
 ___SANDBOXED_JS_FOR_WEB_TEMPLATE___
 
-// Pushizo Web SDK etiketi: SDK'yı injectScript ile yükler, Pushizo.init (idempotent) çağırır ve seçilen
-// eylemi (olay, tag, login) uygular.
+// Pushizo Web SDK tag: load the SDK with injectScript, call Pushizo.init (idempotent), then run the
+// selected action (event, tags, or login).
 const injectScript = require('injectScript');
 const callInWindow = require('callInWindow');
 const makeNumber = require('makeNumber');
@@ -195,7 +195,7 @@ const onFailure = () => {
   data.gtmOnFailure();
 };
 
-// cacheToken = sdkUrl: aynı sayfada birden çok etiket SDK'yı yalnızca bir kez yükler.
+// cacheToken = sdkUrl: multiple tags on the same page load the SDK only once.
 injectScript(sdkUrl, onLoad, onFailure, sdkUrl);
 
 
@@ -366,4 +366,4 @@ scenarios:
 
 ___NOTES___
 
-Pushizo Web Push template. Documentation: https://docs.pushizo.com/docs/integrations — source and issues: https://github.com/pushizo/pushizo-gtm-template
+Pushizo Web Push template. Documentation: https://docs.pushizo.com/docs/integrations - source and issues: https://github.com/pushizo/pushizo-gtm-template
