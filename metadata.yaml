@@ -1,7 +1,5 @@
 homepage: "https://pushizo.com"
 documentation: "https://docs.pushizo.com/docs/integrations"
 versions:
-  - sha: 3408b181c304aedbbfb99afd85a3b8d6afd1a00d
-    changeNotes: Pushizo 0.1.0.
-  - sha: f08de8b8b37fcf5f93af506e3ef636683c8a0a65
+  - sha: 328d0f75bdba30236aa4dd86f5ed2d3488b4365e
     changeNotes: Pushizo 0.1.0.
